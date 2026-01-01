@@ -21,3 +21,5 @@ Nasce da problemi reali affrontati ogni giorno nella Pubblica Amministrazione.
 
 ## Contatti
 Disponibile per adattamenti e script su misura.
+LinkedIn: []
+GitHub: [@]
