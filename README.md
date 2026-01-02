@@ -82,8 +82,8 @@ Nomi degli allegati
 Statistiche aggregate
 ## Contatti
 Disponibile per adattamenti e script su misura.
-LinkedIn: []
-GitHub: [@]
+LinkedIn: massimo-bonechi
+GitHub:massibone
 
 ⭐ Se questo progetto ti è utile, lascia una stella su GitHub!
 🐛 Segnala problemi
