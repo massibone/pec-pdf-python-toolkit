@@ -84,3 +84,7 @@ Statistiche aggregate
 Disponibile per adattamenti e script su misura.
 LinkedIn: []
 GitHub: [@]
+
+⭐ Se questo progetto ti è utile, lascia una stella su GitHub!
+🐛 Segnala problemi
+Hai trovato un bug o hai suggerimenti? Apri una Issue.
