@@ -70,7 +70,16 @@ Cartelle diverse da INBOX
 python
 pec.select_folder("Archive")  # o "Sent", "Drafts", ecc.
 
-
+Output
+Report Excel generato
+Il file Excel contiene:
+Data e ora ricezione
+Categoria automatica
+Mittente
+Oggetto
+Numero allegati
+Nomi degli allegati
+Statistiche aggregate
 ## Contatti
 Disponibile per adattamenti e script su misura.
 LinkedIn: []
