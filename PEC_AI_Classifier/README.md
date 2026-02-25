@@ -1,9 +1,24 @@
-# Classificatore LSTM PyTorch per PEC
+# 🚀 Classificatore LSTM PyTorch per PEC
+
+Classificatore NLP intelligente per smistamento automatico di Posta Elettronica Certificata (PEC).
+
+## 🎯 Problema
+
+Smistare manualmente PEC per categoria (Fatture, Gare, Comunicazioni, etc.) è **tempo perso**.
+
+## ✅ Soluzione
+
+Classificatore LSTM PyTorch che:
+- Analizza soggetto + corpo della PEC
+- Categorizza automaticamente (FATTURA, GARA, COMUNICAZIONE, ALTRO)
+- Genera report Excel pronto per Excel/PowerBI
+- Usa fallback rule-based per bassa confidence
+- Training su dataset reali
+
+---
 
 ## Installazione
-```bash
-pip install -r requirements.txt
-python -m spacy download it_core_news_sm
+
 Training (su dataset reale)
 
 python pec_ai_classifier/train.py --data pec_training_data.csv --epochs 20
