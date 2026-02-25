@@ -1,20 +1,19 @@
-#1: Classificatore LSTM PyTorch per PEC, addestrabile.
-**Problema**: Smistare manualmente PEC per categoria (fatture da contabilità, gare da acquisti, ecc.) è tempo perso.
+# Classificatore LSTM PyTorch per PEC
 
-**Soluzione**: Classificatore NLP con LSTM Pytorch che analizza oggetto+corpo, categorizza e genera `report_pec_ai.xlsx` pronto per Excel/PowerBI.
-
-**Installa**:
+## Installazione
+```bash
 pip install -r requirements.txt
 python -m spacy download it_core_news_sm
-python pec_ai_classifier.py
+Training (su dataset reale)
+Copy
+python pec_ai_classifier/train.py --data pec_training_data.csv --epochs 20
+Inference
+Copy
+python pec_ai_classifier/classifier_pytorch.py --input pecs.xlsx
+Output
+subject	category	confidence	confidence_label
+Fattura 123	        FATTURA    	0.95	HIGH
 
-text
-
-**Output esempio**:
-| subject                  | category     | timestamp           | confidence |
-|--------------------------|--------------|---------------------|------------|
-| Fattura Elettronica...   | FATTURA      | 2026-02-20 09:00    | high       |
-| Bando Gara Pubblica      | GARA         | 2026-02-20 09:00    | high       |
 
 **Integrazioni**:
 - Collega al tuo [pec-pdf-python-toolkit](https://github.com/massibone/pec-pdf-python-toolkit) per full pipeline (download → classify → report).
