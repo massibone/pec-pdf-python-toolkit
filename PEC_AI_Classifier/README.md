@@ -1,8 +1,7 @@
-#1: PEC AI Classifier
-
+#1: Classificatore LSTM PyTorch per PEC, addestrabile.
 **Problema**: Smistare manualmente PEC per categoria (fatture da contabilità, gare da acquisti, ecc.) è tempo perso.
 
-**Soluzione**: Classificatore NLP con spaCy che analizza oggetto+corpo, categorizza e genera `report_pec_ai.xlsx` pronto per Excel/PowerBI.
+**Soluzione**: Classificatore NLP con LSTM Pytorch che analizza oggetto+corpo, categorizza e genera `report_pec_ai.xlsx` pronto per Excel/PowerBI.
 
 **Installa**:
 pip install -r requirements.txt
