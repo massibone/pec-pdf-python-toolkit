@@ -152,5 +152,3 @@ Dataset: Usa almeno 50-100 PEC reali per training accurato
 Preprocessing: Automatic con spacy + lemmatizzazione italiano
 Fallback: Se confidence < 60%, usa regole rule-based
 
-📝 Licenza
-MIT
