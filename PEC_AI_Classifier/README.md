@@ -81,6 +81,7 @@ PECClassifierWithAttention: Con attention mechanism
 📊 Performance
 Su dataset di test (~200 PEC):
 
+
 Accuracy: 92%
 Precision (FATTURA): 95%
 Recall (GARA): 88%
