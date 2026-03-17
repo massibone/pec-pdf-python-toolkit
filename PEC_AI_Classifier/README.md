@@ -98,6 +98,7 @@ pec_ai_classifier/
 ├── example_usage.py       # Esempi
 └── README.md
 
+
 🔧 Configurazione
 Modifica config.py:
 
