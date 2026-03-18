@@ -156,4 +156,5 @@ Fallback: Se confidence < 60%, usa regole rule-based
 # 🚀 NLPAug è una libreria Python per data augmentation testuale specifica per NLP/ML: genera varianti sintetiche dei tuoi testi PEC (oggetto + corpo) per espandere il dataset di training del classificatore PyTorch, rendendolo più robusto senza raccogliere nuove PEC reali.
 
 Con poche PEC reali (es. 10–20), NLPAug ne crea 5–10x di più, simulando variazioni (errori battitura, sinonimi, back-translation) tipiche di email amministrative italiane.
-
+## Installazione
+pip install nlpaug pandas torch
