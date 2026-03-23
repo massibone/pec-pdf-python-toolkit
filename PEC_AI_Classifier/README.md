@@ -158,3 +158,9 @@ Fallback: Se confidence < 60%, usa regole rule-based
 Con poche PEC reali (es. 10–20), NLPAug ne crea 5–10x di più, simulando variazioni (errori battitura, sinonimi, back-translation) tipiche di email amministrative italiane.
 ## Installazione
 pip install nlpaug pandas torch
+
+# BackTranslationAug (IT → EN → IT)
+
+Esempio minimo per generare parafrasi tramite back-translation usando nlpaug
+(IT → EN → IT). Utile per data augmentation su testi in italiano.
+
