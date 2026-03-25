@@ -1,8 +1,6 @@
-# 🗺️ Mappa del Progetto: PEC_AI_Classifier
+# 🗺️ Mappa PEC_AI_Classifier
 
-Massimo, ecco l'analisi dettagliata della tua cartella GitHub. Non hai fatto confusione: hai costruito un sistema modulare molto potente. Ecco come sono organizzati i tuoi file.
-
----
+--
 
 ### 🔍 Analisi Tecnica: Suddivisione dei File per Funzione
 
@@ -15,15 +13,11 @@ Massimo, ecco l'analisi dettagliata della tua cartella GitHub. Non hai fatto con
 
 ---
 
-### 💡 Consigli dell'Insegnante (Pulizia e Organizzazione)
+### 💡 Consigli  (Pulizia e Organizzazione)
 
 *   **File Duplicati**: `nlpaug.py` e `pec_augmentation.py` sembrano sovrapporsi. Ti consiglio di tenere `pec_augmentation.py` come script principale per generare il dataset e usare gli altri (`KeyboardAug.py`, ecc.) come moduli di supporto.
-*   **Il README è Ottimo**: Il tuo `README.md` è scritto molto bene e spiega chiaramente come usare il toolkit. È il pezzo forte del repository.
-*   **Dataset**: Hai creato `pec_dataset_augmented.csv` solo 3 minuti fa (secondo il log). Questo è il file "carburante" che devi dare in pasto a `train.py`.
+
+*   **Dataset**: Creato `pec_dataset_augmented.csv` da dare in pasto a `train.py`.
 
 ---
 
-### ✅ Azione Immediata per Oggi
-**Non cancellare nulla.** Usa questa mappa per decidere quali file tenere nel repository principale e quali magari spostare in una sottocartella `research` o `scripts`.
-
-Vuoi che ti aiuti a creare uno script `setup.py` o un `requirements.txt` per rendere il progetto installabile professionalmente da altri utenti su GitHub?
