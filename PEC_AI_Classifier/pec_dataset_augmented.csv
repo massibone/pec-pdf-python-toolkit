@@ -1,0 +1,7 @@
+| label            | text                                           | tipo\_errore          |
+| :--------------- | :--------------------------------------------- | :-------------------- |
+| **Fatturazione** | Invio fattura n. 123 per servizi IT.           | *Originale*           |
+| **Fatturazione** | Invio fatyura n. 123 per servizii IT.          | **Keyboard (Errori)** |
+| **Fatturazione** | Trasmissione parcella n. 123 per consulenza.   | **Synonym (Varietà)** |
+| **Sollecito**    | Si richiede pagamento urgente fattura scaduta. | *Originale*           |
+| **Sollecito**    | Si richidde pagamneto urgnete fsttura scsduta. | **Keyboard (Errori)** |
