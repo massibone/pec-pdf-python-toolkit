@@ -1,4 +1,3 @@
-# pec_ai_classifier/classifier_pytorch.py
 """
 Classificatore PEC con PyTorch (LSTM). Addestra su dataset custom.
 Integra con pec_automation.py: classifica dopo download.
