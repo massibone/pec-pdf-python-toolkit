@@ -82,21 +82,6 @@ PECClassifierWithAttention: Con attention mechanism
 Su dataset di test (~200 PEC):
 
 
-Accuracy: 92%
-Precision (FATTURA): 95%
-Recall (GARA): 88%
-📁 Struttura progetto
-
-pec_ai_classifier/
-├── __init__.py
-├── config.py              # Configurazione
-├── dataset.py             # PyTorch Dataset
-├── model.py               # Architetture LSTM
-├── train.py               # Training loop + Early stopping
-├── inference.py           # Predizione + Report generation
-├── utils.py               # Preprocessing + Vocab
-├── example_usage.py       # Esempi
-└── README.md
 
 
 🔧 Configurazione
@@ -164,3 +149,6 @@ pip install nlpaug pandas torch
 Esempio minimo per generare parafrasi tramite back-translation usando nlpaug
 (IT → EN → IT). Utile per data augmentation su testi in italiano.
 
+Gestione del Vocabolario: Il codice pec_augmentation.py crea un vocab e una label_map più complessi, necessari per mappare termini amministrativi come "fattura/bolletta/parcella" che il primo codice potrebbe trattare come parole separate senza coglierne il legame semantico.
+Efficienza con Polars: Se il tuo dataset pec_dataset_augmented.csv supera le 100.000 righe, il primo approccio con Pandas inizierà a rallentare vistosamente. In quel caso, passare a Polars per il caricamento (come ti ho suggerito prima) diventa obbligatorio.
+Overfitting: Con 20 epoche (Approccio 2), il rischio è che il modello "impari a memoria" le PEC di esempio. L'Augmentation (Approccio 1) serve proprio a evitare questo, fornendo varianti sempre
