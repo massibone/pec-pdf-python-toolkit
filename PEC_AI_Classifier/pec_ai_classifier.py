@@ -1,8 +1,8 @@
-# pec_ai_classifier.py - Classificatore AI per PEC (snippet settimanale Python-Office-PA-Toolkit)
+# pec_ai_classifier.py - Classificatore AI per PEC
 """
 Classificatore NLP per categorizzare PEC usando spaCy.
 Categorie: FATTURA, GARA, COMUNICAZIONE, ALTRO.
-Integra con tool PEC esistenti (es. pec-pdf-python-toolkit).
+Integra con tool PEC esistenti 
 """
 
 import spacy
