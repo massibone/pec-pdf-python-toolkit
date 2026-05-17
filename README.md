@@ -2,7 +2,6 @@
 
 Toolkit Python per automatizzare operazioni comuni su email/PEC e documenti PDF.
 
-
 ## Cosa fa
 - Estrazione allegati da email/PEC
 - Rinomina automatica PDF
