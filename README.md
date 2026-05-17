@@ -87,4 +87,5 @@ GitHub:massibone
 
 ⭐ Se questo progetto ti è utile, lascia una stella su GitHub!
 🐛 Segnala problemi
-Hai trovato un bug o hai suggerimenti? Apri una Issue.
+Hai trovato un bug o hai suggerimenti? 
+Apri una Issue.
