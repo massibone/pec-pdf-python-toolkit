@@ -1,91 +1,166 @@
-# Python PEC & PDF Automation Toolkit
+# PEC & PDF Automation Toolkit
 
-Toolkit Python per automatizzare operazioni comuni su email/PEC e documenti PDF.
+Toolkit Python per automatizzare workflow documentali legati a PEC, allegati e PDF in contesti amministrativi, studi professionali e uffici che gestiscono grandi volumi di documenti. Il progetto nasce per: ridurre attività manuali ripetitive, migliorare l'organizzazione dei file e velocizzare la reportistica. 
 
-## Cosa fa
-- Estrazione allegati da email/PEC
-- Rinomina automatica PDF
-- Controlli su file e cartelle
-- Script modulari e personalizzabili
+## Panoramica
 
-## Per chi è
-- studi professionali
-- uffici amministrativi
-- chi gestisce molti documenti manualmente
+Questo repository raccoglie script modulari per semplificare attività comuni come:
 
-## Perché esiste
-Nasce da problemi reali affrontati ogni giorno nella Pubblica Amministrazione.
+- estrazione allegati da email/PEC;
+- organizzazione dei file scaricati;
+- rinomina automatica dei PDF;
+- classificazione preliminare dei contenuti;
+- esportazione di report Excel per controllo e monitoraggio.
 
-## Come usarlo
-1. Clona il repository
-bash
-git clone https://github.com/tuousername/pec-automation-toolkit.git
-cd pec-automation-toolkit
-2. Installa le dipendenze
-bash
+
+## Funzionalità principali
+
+- Download allegati da email/PEC.
+- Selezione della cartella IMAP da elaborare.
+- Filtri base sul numero di email o sui messaggi non letti.
+- Estrazione e salvataggio degli allegati in cartelle dedicate.
+- Rinomina e organizzazione dei PDF.
+- Esportazione dati in Excel per reportistica e controllo operativo.
+- Struttura modulare, pensata per futuri adattamenti o integrazioni.
+
+## Struttura del progetto
+
+pec-pdf-python-toolkit/
+├─ PEC_AI_Classifier/
+├─ allegati_pec/
+├─ pec_automation.py
+├─ config.example.json
+├─ README.md
+└─ report_pec_*.xlsx
+
+
+## Output generato
+
+A seconda dello script eseguito, il toolkit può produrre:
+
+- cartelle con allegati estratti;
+- PDF rinominati e organizzati;
+- file Excel con dati riepilogativi;
+- informazioni utili per audit interno o controllo documentale.
+
+Un report Excel tipico può includere:
+
+- data e ora di ricezione;
+- mittente;
+- oggetto;
+- categoria assegnata;
+- numero allegati;
+- nomi dei file scaricati;
+- statistiche aggregate.
+
+
+## Installazione
+
+Clonare il repository:
+
+
+git clone https://github.com/massibone/pec-pdf-python-toolkit.git
+cd pec-pdf-python-toolkit
+
+
+Installare le dipendenze:
+
+
 pip install -r requirements.txt
-3. Configura le credenziali
-Crea un file config.json nella root del progetto:
-json
+
+
+Creare e attivare un ambiente virtuale è consigliato, soprattutto per mantenere separate le dipendenze del progetto.
+
+## Configurazione
+
+Per motivi di sicurezza, le credenziali non dovrebbero mai essere salvate direttamente in un file versionato nel repository pubblico. La pratica consigliata è usare un file di esempio versionato e un file reale ignorato da Git. 
+Creare un file `config.json` locale partendo da `config.example.json`:
+
+```json
 {
-  "imap_server": "imap.tuoserver.it",
-  "email": "tua@pec.it",
-  "password": "tuapassword"
+  "imap_server": "imap.example.it",
+  "email": "nome@pec.it",
+  "password": "inserisci-qui-la-password"
 }
-⚠️ IMPORTANTE: Aggiungi config.json al tuo .gitignore per non condividere le credenziali!
-📖 Utilizzo
-Utilizzo base
-python
+```
+
+Aggiungere `config.json` al file `.gitignore` per evitare la pubblicazione accidentale di credenziali sensibili. 
+
+## Utilizzo rapido
+
+Esempio base:
+
+
 from pec_automation import PECAutomation
 
-# Inizializza
 pec = PECAutomation("imap.server.it", "tua@pec.it", "password")
 
-# Connetti e processa
 if pec.connect():
     pec.select_folder("INBOX")
     pec.fetch_emails(limit=50)
     pec.download_attachments(output_folder="allegati")
     pec.export_to_excel("report.xlsx")
     pec.close()
-Esecuzione script completo
-bash
+
+
+Esecuzione dello script principale:
+
+
 python pec_automation.py
-Solo email non lette
-python
+
+
+Elaborazione dei soli messaggi non letti:
+
+
 pec.fetch_emails(limit=100, unread_only=True)
-🎨 Personalizzazione
-Modificare le categorie
-Modifica la funzione _categorize_email() nel file pec_automation.py:
-python
-def _categorize_email(self, subject, from_):
+
+
+## Personalizzazione
+
+Il toolkit è pensato per essere adattato facilmente a flussi diversi. Alcuni esempi di personalizzazione:
+
+- regole di categorizzazione per oggetto o mittente;
+- cartelle IMAP diverse da `INBOX`;
+- struttura di salvataggio allegati personalizzata;
+- naming convention dedicate per i PDF;
+- export Excel con colonne o statistiche aggiuntive.
+
+Esempio di logica personalizzata per la categorizzazione:
+
+
+def categorize_email(subject, sender):
     subject_lower = subject.lower() if subject else ""
-    
+
     if "fattura" in subject_lower:
         return "Fatture"
     elif "delibera" in subject_lower:
         return "Delibere"
-    # Aggiungi le tue regole...
-Cartelle diverse da INBOX
-python
-pec.select_folder("Archive")  # o "Sent", "Drafts", ecc.
+    else:
+        return "Altro"
 
-Output
-Report Excel generato
-Il file Excel contiene:
-Data e ora ricezione
-Categoria automatica
-Mittente
-Oggetto
-Numero allegati
-Nomi degli allegati
-Statistiche aggregate
+
+## Roadmap
+
+Possibili evoluzioni future del progetto:
+
+- classificazione documentale più avanzata;
+- estrazione metadati da PDF;
+- dashboard riepilogative;
+- integrazione con API o servizi documentali;
+- miglioramento logging e tracciabilità delle operazioni;
+- packaging CLI per utilizzo più semplice.
+
 ## Contatti
-Disponibile per adattamenti e script su misura.
-LinkedIn: massimo-bonechi
-GitHub:massibone
 
-⭐ Se questo progetto ti è utile, lascia una stella su GitHub!
-🐛 Segnala problemi
-Hai trovato un bug o hai suggerimenti? 
-Apri una Issue.
+Per collaborazioni, personalizzazioni o adattamenti su workflow documentali e automazioni Python:
+
+- GitHub: [massibone](https://github.com/massibone)
+- LinkedIn: massimo-bonechi
+
+## Supporto
+
+Se il progetto ti è utile:
+
+- lascia una stella al repository;
+- apri una Issue per bug o miglioramenti;
+- proponi estensioni o casi d'uso reali.
