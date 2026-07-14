@@ -2,7 +2,6 @@
 """
 PEC Automation Toolkit
 Automatizza la gestione delle email PEC: lettura, estrazione allegati, categorizzazione
-Ideale per uffici PA e studi professionali
 """
 
 import imaplib
