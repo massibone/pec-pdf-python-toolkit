@@ -1,4 +1,3 @@
-
 """
 PEC Automation Toolkit
 Automatizza la gestione delle email PEC: lettura, estrazione allegati, categorizzazione
