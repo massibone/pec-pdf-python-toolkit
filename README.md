@@ -4,6 +4,7 @@ Toolkit Python per automatizzare workflow documentali legati a PEC, allegati e P
 
 ## Panoramica
 
+
 Questo repository raccoglie script modulari per semplificare attività comuni come:
 
 - estrazione allegati da email/PEC;
