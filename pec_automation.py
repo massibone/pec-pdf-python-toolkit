@@ -3,6 +3,7 @@ PEC Automation Toolkit
 Automatizza la gestione delle email PEC: lettura, estrazione allegati, categorizzazione
 """
 
+
 import imaplib
 import email
 from email.header import decode_header
